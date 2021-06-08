@@ -1,0 +1,28 @@
+<div class="table-responsive">
+    <table class="table table-borderless">
+        <thead>
+            <tr>
+                <td>Номер</td>
+                <td>Имя</td>
+                <td>Фамилия</td>
+                <td>Телефон</td>
+                <td>Событие</td>
+                <td>Местоположение</td>
+                <td>Описание</td>
+                <td>Время</td>
+            </tr>
+        </thead>
+        <tbody *ngFor="let registerList of registerLists">
+            <tr>
+                <td>{{registerList.registrationId}}</td>
+                <td>{{registerList.firstName}}</td>
+                <td>{{registerList.lastName}}</td>
+                <td>{{registerList.phoneNumber}}</td>
+                <td>{{registerList.event.eventName}}</td>
+                <td>{{registerList.event.eventLocation}}</td>
+                <td>{{registerList.event.eventDescription}}</td>
+                <td>{{registerList.event.eventTime}}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>

@@ -1,0 +1,29 @@
+<div class=" conteiner">
+    <h2 class="text-center">Добавить событие</h2>
+    <form [formGroup]="form" (ngSubmit)="onSubmit() " class="col-m-4">
+        <div>
+            <label class="form-label">Наименнование</label>
+            <input type="text" formControlName="eventName" class="form-control">
+
+        </div>
+        <div>
+            <label class="form-label">Местоположение</label>
+            <input type="text" formControlName="eventLocation" class="form-control">
+        </div>
+        <div>
+            <label class="form-label">Описание</label>
+            <input type="text" formControlName="eventDescription" class="form-control">
+        </div>
+        <div>
+            <label class="form-label">Дата</label>
+            <input type="datetime-local" formControlName="eventTime" class="form-control">
+
+        </div>
+
+        <div class=" mt-2 d-flex justify-content-between ">
+            <div> <button type="button" class="btn btn-warning" (click)="closeModal()">Отмена</button></div>
+            <div> <button type="submit" class="btn btn-primary " [disabled]="form.invalid">Сохранить
+                </button></div>
+        </div>
+    </form>
+</div>

@@ -1,0 +1,23 @@
+<div class="container">
+    <form [formGroup]="form" (ngSubmit)="onSubmit()" class="my-3">
+        <h1 class="h3 mb-3 fw-normal text-center">Введите свои данные</h1>
+
+        <div class="form-floating">
+            <label for="floatingInput">Имя</label>
+            <input type="text" formControlName="firstName" class="form-control" id="floatingInput">
+        </div>
+        <div class="form-floating">
+            <label for="floatingPassword">Фамилия</label>
+            <input type="text" formControlName="lastName" class="form-control" id="floatingPassword">
+        </div>
+        <div class="form-floating mb-4">
+            <label for="floatingPassword">Номер телефона</label>
+            <input type="text" formControlName="phoneNumber" autocomplete="off" class="form-control"
+                id="floatingPassword">
+        </div>
+        <div style="display: flex; justify-content: space-between;">
+            <button class='btn btn-success'>Отмена</button>
+            <button type='submit' class='btn btn-primary'>Отправить</button>
+        </div>
+    </form>
+</div>

@@ -1,0 +1,17 @@
+<div class="container-fluid">
+    <div *ngFor="let eventModel of eventsModel " class="card mb-4 box-shadow p-3"
+        style="width: 200; display: inline-block; margin: 10px; ">
+        <p> Наименование события: {{eventModel.eventName}}</p>
+        <p> Местоположение: {{eventModel.eventLocation}}</p>
+        <p>Описание: {{eventModel.eventDescription}}</p>
+        <p>Время: {{eventModel.eventTime}} </p>
+
+        <button type=" button" class="btn btn-warning" (click)="registEventModal(registerContent)">Регистрироваться на
+            событие</button>
+        <ng-template #registerContent let-modal>
+            <div>
+                <app-register [eventId]="eventModel.eventId"></app-register>
+            </div>
+        </ng-template>
+    </div>
+</div>

@@ -1,0 +1,13 @@
+<div class="card">
+    <div class="card-body">
+        <h1 class="card-title">Подтверждение электронного адреса</h1>
+        <div *ngIf="showError" class="alert alert-danger" role="alert">
+            {{errorMessage}}
+        </div>
+
+        <div *ngIf="showSuccess" class="alert alert-success" role="alert">
+            Ваш адрес электронной почты был успешно подтвержден. Пожалуйста <a [routerLink]="['/authentication/login']">
+                перейдите на главную страницу. </a>
+        </div>
+    </div>
+</div>
